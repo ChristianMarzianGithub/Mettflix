@@ -1,0 +1,36 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns = "http://www.w3.org/1999/xhtml"
+   xmlns:f = "http://java.sun.com/jsf/core"    
+   xmlns:h = "http://java.sun.com/jsf/html"
+   xmlns:ui = "http://java.sun.com/jsf/facelets">
+   
+   <head>
+      <title>JSF Tutorial!</title>
+      
+      
+   </head>
+   
+   <h:body>
+      <h2>Result</h2>
+      <hr />
+      #{userData.data}
+      
+      <h:outputStylesheet library="css" name="http://vjs.zencdn.net/5.18.4/video-js.css"  />
+      
+      
+     
+      
+      <video id="my-video" class="video-js" controls="controls" preload="auto" width="640" height="264"
+        poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
+          <source src="#{userData.data}" type='video/mp4'/>
+          <source src="#{userData.data}" type='video/webm'/>
+          <p class="vjs-no-js">
+            To view this video please enable JavaScript, and consider upgrading to a web browser that
+            <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+          </p>
+        </video>
+   </h:body>
+</html>  
